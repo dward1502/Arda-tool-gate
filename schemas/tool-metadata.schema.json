@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ToolMetadata",
+  "type": "object",
+  "required": [
+    "tool_id",
+    "description",
+    "risk_level",
+    "mutates_state",
+    "idempotent",
+    "requires_review",
+    "allowed_targets"
+  ],
+  "properties": {
+    "tool_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_level": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "mutates_state": {
+      "type": "boolean"
+    },
+    "idempotent": {
+      "type": "boolean"
+    },
+    "requires_review": {
+      "type": "boolean"
+    },
+    "allowed_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "tool_id": "demo.deploy",
+  "description": "Deploy a release to production",
+  "risk_level": "critical",
+  "mutates_state": true,
+  "idempotent": true,
+  "requires_review": true,
+  "allowed_targets": [
+    "production/"
+  ]
+}

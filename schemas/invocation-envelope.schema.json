@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InvocationEnvelope",
+  "type": "object",
+  "required": [
+    "invocation_id",
+    "tool_id",
+    "requested_at_utc",
+    "caller",
+    "input_summary",
+    "target"
+  ],
+  "properties": {
+    "invocation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "caller": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trace_id": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

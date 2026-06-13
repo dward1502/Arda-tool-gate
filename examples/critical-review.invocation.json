@@ -1,0 +1,9 @@
+{
+  "invocation_id": "invoke-deploy-001",
+  "tool_id": "demo.deploy",
+  "requested_at_utc": "2026-06-13T00:00:00Z",
+  "caller": "agent.demo",
+  "input_summary": "Deploy release candidate",
+  "trace_id": "example-trace-003",
+  "target": "production/service-a"
+}

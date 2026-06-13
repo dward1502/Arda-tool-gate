@@ -1,0 +1,11 @@
+{
+  "tool_id": "demo.format",
+  "description": "Format a local source file in place",
+  "risk_level": "medium",
+  "mutates_state": true,
+  "idempotent": true,
+  "requires_review": false,
+  "allowed_targets": [
+    "workspace/"
+  ]
+}

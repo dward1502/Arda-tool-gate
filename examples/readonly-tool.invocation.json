@@ -1,0 +1,9 @@
+{
+  "invocation_id": "invoke-readonly-001",
+  "tool_id": "demo.readonly",
+  "requested_at_utc": "2026-06-13T00:00:00Z",
+  "caller": "agent.demo",
+  "input_summary": "Inspect a source file without modifying it",
+  "trace_id": "example-trace-001",
+  "target": "workspace/src/lib.rs"
+}

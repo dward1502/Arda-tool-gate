@@ -1,0 +1,11 @@
+{
+  "tool_id": "demo.readonly",
+  "description": "Read a local project file summary",
+  "risk_level": "low",
+  "mutates_state": false,
+  "idempotent": true,
+  "requires_review": false,
+  "allowed_targets": [
+    "workspace/"
+  ]
+}

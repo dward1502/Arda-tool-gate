@@ -1,0 +1,8 @@
+{
+  "invocation_id": "invoke-format-002",
+  "tool_id": "demo.format",
+  "requested_at_utc": "2026-06-13T00:00:00Z",
+  "caller": "agent.demo",
+  "input_summary": "Format one source file without trace evidence",
+  "target": "workspace/src/lib.rs"
+}

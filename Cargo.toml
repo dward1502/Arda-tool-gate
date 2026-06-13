@@ -1,0 +1,19 @@
+[package]
+name = "tool-gate"
+version = "0.1.0"
+edition = "2021"
+description = "Policy-gated tool invocation receipts for autonomous agents"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/dward1502/tool-gate"
+readme = "README.md"
+keywords = ["agents", "tools", "policy", "receipts", "safety"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"
