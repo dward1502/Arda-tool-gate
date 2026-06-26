@@ -1,0 +1,1 @@
+{"tool_id":"deploy.prod","description":"Deploy production service","risk_level":"critical","mutates_state":true,"idempotent":true,"requires_review":true,"allowed_targets":["prod/*"]}

@@ -1,0 +1,1 @@
+{"tool_id":"docs.search","description":"Search local documentation","risk_level":"low","mutates_state":false,"idempotent":true,"requires_review":false,"allowed_targets":["docs/*"]}

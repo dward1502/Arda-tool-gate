@@ -1,0 +1,1 @@
+{"invocation_id":"inv-002","tool_id":"issue.label","requested_at_utc":"2026-06-13T00:00:00Z","caller":"agent.demo","input_summary":"label issue as triaged","trace_id":"trace-mutate-001","target":"issues/123"}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InvocationEnvelope",
+  "type": "object",
+  "required": ["invocation_id", "tool_id", "requested_at_utc", "caller", "input_summary", "target"],
+  "properties": {
+    "invocation_id": {"type": "string"},
+    "tool_id": {"type": "string"},
+    "requested_at_utc": {"type": "string"},
+    "caller": {"type": "string"},
+    "input_summary": {"type": "string"},
+    "trace_id": {"type": ["string", "null"]},
+    "target": {"type": "string"}
+  }
+}

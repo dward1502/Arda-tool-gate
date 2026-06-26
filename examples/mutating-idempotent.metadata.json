@@ -1,0 +1,1 @@
+{"tool_id":"issue.label","description":"Apply a label to an issue","risk_level":"medium","mutates_state":true,"idempotent":true,"requires_review":false,"allowed_targets":["issues/*"]}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DecisionReceipt",
+  "type": "object",
+  "required": ["schema_version", "decision", "reason", "risk_level", "requires_review", "trace_id", "policy_checks"],
+  "properties": {
+    "schema_version": {"const": "tool-gate.decision.v1"},
+    "decision": {"enum": ["allow", "deny", "review_required"]},
+    "reason": {"type": "string"},
+    "risk_level": {"enum": ["low", "medium", "high", "critical"]},
+    "requires_review": {"type": "boolean"},
+    "trace_id": {"type": ["string", "null"]},
+    "policy_checks": {"type": "array"}
+  }
+}

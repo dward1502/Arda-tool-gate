@@ -1,0 +1,42 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">tool-gate banner</title>
+  <desc id="desc">A dark technical banner showing a policy gate between an agent and tool execution.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09111F"/>
+      <stop offset="0.52" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="392" y1="78" x2="808" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.18 0 0 0 0 0.82 0 0 0 0 1 0 0 0 0.6 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" stroke="#94A3B8" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="420" rx="30" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="30" fill="url(#grid)"/>
+  <circle cx="190" cy="112" r="90" fill="#22D3EE" fill-opacity="0.10"/>
+  <circle cx="1010" cy="314" r="120" fill="#A78BFA" fill-opacity="0.12"/>
+  <path d="M155 210H390" stroke="#64748B" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <path d="M810 210H1045" stroke="#64748B" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <g filter="url(#glow)">
+    <rect x="390" y="72" width="420" height="276" rx="34" fill="#020617" stroke="url(#gate)" stroke-width="5"/>
+    <path d="M520 210L582 272L700 144" stroke="url(#gate)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M600 77V343" stroke="#334155" stroke-width="2" stroke-opacity="0.55"/>
+  </g>
+  <g fill="#E2E8F0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+    <text x="72" y="94" font-size="28" font-weight="700" fill="#67E8F9">agent request</text>
+    <text x="72" y="132" font-size="20" fill="#CBD5E1">metadata + envelope</text>
+    <text x="885" y="94" font-size="28" font-weight="700" fill="#C4B5FD">tool execution</text>
+    <text x="885" y="132" font-size="20" fill="#CBD5E1">allow · deny · review</text>
+    <text x="82" y="330" font-size="64" font-weight="800" letter-spacing="-2">tool-gate</text>
+    <text x="84" y="368" font-size="22" fill="#CBD5E1">policy-gated tool invocation receipts for autonomous agents</text>
+  </g>
+</svg>

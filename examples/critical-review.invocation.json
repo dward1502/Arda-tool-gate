@@ -1,0 +1,1 @@
+{"invocation_id":"inv-003","tool_id":"deploy.prod","requested_at_utc":"2026-06-13T00:00:00Z","caller":"agent.demo","input_summary":"deploy release","trace_id":"trace-review-001","target":"prod/api"}
