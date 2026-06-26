@@ -12,6 +12,29 @@ frameworks, storage layers, and LLM providers all remain outside the core. Bring
 your own adapter, pass in a `ToolMetadata` plus an `InvocationEnvelope`, and use
 the receipt to gate execution in your application.
 
+## Vision
+
+`tool-gate` is the ARDA safety boundary between an agent's proposed action and a
+runtime's permission to execute it. It makes tool decisions deterministic,
+auditable, and portable: every invocation is reduced to explicit metadata,
+policy checks, and a machine-readable receipt before side effects happen.
+
+## ARDA Architecture Role
+
+```mermaid
+flowchart TB
+    Agent[Autonomous Agent] --> Intent[Tool Invocation Intent]
+    Intent --> Envelope[Invocation Envelope]
+    Catalog[Tool Metadata Catalog] --> Gate[tool-gate Policy Engine]
+    Envelope --> Gate
+    Gate --> Decision{Decision Receipt}
+    Decision -->|allow| Runtime[Execution Runtime]
+    Decision -->|review_required| Operator[Human Review]
+    Decision -->|deny| Audit[Denied Action Log]
+    Runtime --> Audit[Audit Receipts]
+    Operator --> Audit
+```
+
 ## Why use it?
 
 Autonomous systems often need a simple boundary between "the agent wants to do
