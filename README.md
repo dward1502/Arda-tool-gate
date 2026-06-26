@@ -19,7 +19,20 @@ runtime's permission to execute it. It makes tool decisions deterministic,
 auditable, and portable: every invocation is reduced to explicit metadata,
 policy checks, and a machine-readable receipt before side effects happen.
 
-## ARDA Architecture Role
+## Getting Started
+
+```bash
+git clone https://github.com/dward1502/Arda-tool-gate.git
+cd Arda-tool-gate
+cargo run -- check examples/readonly-tool.metadata.json examples/readonly-tool.invocation.json
+cargo test
+```
+
+Use the CLI against local metadata and invocation JSON first. Production systems
+should feed the resulting decision receipt into their own execution runtime
+rather than letting agents bypass the gate.
+
+## Architecture Overview
 
 ```mermaid
 flowchart TB
@@ -34,6 +47,18 @@ flowchart TB
     Runtime --> Audit[Audit Receipts]
     Operator --> Audit
 ```
+
+## Relationship to ARDA
+
+Tool Gate is ARDA's pre-execution policy boundary. Agent Loop can propose work,
+Council can deliberate on risk, and HUD can expose review surfaces, but Tool Gate
+is the deterministic receipt-producing layer that says whether a requested tool
+invocation is allowed, denied, or requires human review.
+
+## Status
+
+Active Rust library and CLI. The core is intentionally adapter-free: callers
+bring tool catalogs, queue integrations, storage, sandboxing, and authentication.
 
 ## Why use it?
 
